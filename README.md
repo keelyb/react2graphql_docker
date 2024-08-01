@@ -20,3 +20,8 @@ docker run -d -p 3020:80 --name docker-react-container docker-react-image:1.0
 
 http://localhost:3020
 
+
+# EXAMPLES
+
+![image](https://github.com/user-attachments/assets/2dcf1546-ba35-44cc-bd4c-c8871559c615)
+
