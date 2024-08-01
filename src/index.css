@@ -1,0 +1,104 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+body {
+  @apply bg-gray-100;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.content-container {
+  @apply transition-all duration-300 ml-12  ;
+}
+
+.content-container.expanded {
+  @apply ml-36;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  flex-shrink: 0; /* Ensure top-nav doesn't shrink */
+  z-index: 2; /* Ensure top-nav is above everything */
+}
+
+.company-logo img {
+  height: 40px;
+}
+
+.side-drawer {
+  height: calc(100% - 60px); /* Adjust for top nav height */
+  width: 40px; /* Width when collapsed */
+  position: fixed;
+  z-index: 1; /* Ensure side drawer is below top-nav */
+  top: 30px; /* Match top nav height */
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: width 0.5s;
+  white-space: nowrap;
+}
+
+.side-drawer a {
+  padding: 8px 8px 8px 8px; /* Reduced padding */
+  text-decoration: none;
+  font-size: 20px; /* Reduced font size */
+  color: #818181;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.side-drawer a i {
+  margin-right: 8px; /* Reduced margin */
+}
+
+.side-drawer a:hover {
+  color: #f1f1f1;
+  background-color: #353535;
+}
+
+.side-drawer:hover {
+  width: 160px; /* Reduced expanded width */
+}
+
+.side-drawer:hover + #main {
+  padding-left: 140px; /* Match the expanded side drawer width */
+}
+
+.link-text {
+  display: none; /* Hide text when collapsed */
+}
+
+.side-drawer:hover .link-text {
+  display: inline-block; /* Show text on hover */
+}
+
+#main {
+  flex: 1;
+  margin-left: 40px; /* Adjust for side drawer width */
+  padding: 20px;
+  transition: margin-left 0.5s;
+  position: relative; /* Ensure main content is in the normal flow */
+  z-index: 0; /* Ensure main content is behind everything else */
+  background-color: #dddddd;
+}
+
+
+

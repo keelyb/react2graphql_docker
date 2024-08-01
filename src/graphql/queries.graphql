@@ -1,0 +1,9 @@
+query GetServices {
+  authors {
+    name
+    books {
+      title
+      pages
+    }
+  }
+}
