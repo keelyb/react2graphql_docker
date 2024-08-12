@@ -3,7 +3,10 @@ An example React TS app example connecting to the graphql_node example.
 
 # SETUP
 
-- TODO
+~~~
+yarn install
+yarn build
+~~~
 
 # RUN
 
