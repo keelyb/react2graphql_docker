@@ -5,7 +5,7 @@ An example React TS app example connecting to the graphql_node example.
 - This Depends on graphql running on http://localhost:4000. 
 - https://github.com/keelyb/graphql_node/tree/main
 - Test running with: http://localhost:4000/graphql:
-  ~~~
+~~~
   query GetServices {
    authors {
     id
@@ -27,7 +27,7 @@ An example React TS app example connecting to the graphql_node example.
     }
   }
 }
-  ~~~
+~~~
   
   
   
