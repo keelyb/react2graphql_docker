@@ -1,11 +1,41 @@
 # react2graphql_docker
 An example React TS app example connecting to the graphql_node example.
 
+# DEPENDENCY
+- This Depends on graphql running on http://localhost:4000. 
+- https://github.com/keelyb/graphql_node/tree/main
+- Test running with: http://localhost:4000/graphql:
+  ~~~
+  query GetServices {
+   authors {
+    id
+    name
+    books {
+      id
+      title
+      pages
+    }
+    audiobooks {
+      id
+      title
+      durationMinutes
+    }
+    videos {
+      id
+      title
+      durationMinutes
+    }
+  }
+}
+  ~~~
+  
+  
+  
+
 # SETUP
 
 ~~~
-yarn install
-yarn build
+
 ~~~
 
 # RUN
@@ -14,6 +44,11 @@ yarn build
 
 ~~~
 yarn start
+
+yarn install
+
+yarn build
+
 ~~~
     http://localhost:3000
 
